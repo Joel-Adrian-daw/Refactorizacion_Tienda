@@ -15,23 +15,17 @@ import java.util.Scanner;
  */
 public class Tienda {
 
-    public static ArrayList<String> n = new ArrayList<>(); // Nombres
-    public static ArrayList<Double> p = new ArrayList<>(); // Precios
-    public static ArrayList<Integer> s = new ArrayList<>(); // Stock
+     //Lista de productos disponibles con arraylist
+    public static ArrayList<Producto>productos=new ArrayList<>();
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         // Datos de prueba iniciales
-        n.add("Camiseta");
-        p.add(15.0);
-        s.add(10);
-        n.add("Pantalón");
-        p.add(30.0);
-        s.add(5);
-        n.add("Zapatos");
-        p.add(45.0);
-        s.add(2);
+        // Productos iniciales
+        productos.add(new Producto("Camiseta",15.0,10));
+        productos.add(new Producto("pantalon", 0, 0));
+        productos.add(new Producto("zapato", 0, 0));
         
         while(true) {
             System.out.println("\n--- TIENDA ---");
