@@ -73,9 +73,9 @@ public class Tienda {
                     break;
                 }
                 
-                if(pos != -1) {
-                    System.out.println("Producto encontrado: " + n.get(pos));
-                    System.out.println("Precio: " + p.get(pos) + "€ | Stock: " + s.get(pos));
+                if(encontrado !=null) {
+                    System.out.println("Producto encontrado: " + encontrado.getNombre());
+                    System.out.println("Precio: " + encontrado.getPrecio() + "€ | Stock: " + encontrado.getStock());
                     System.out.print("Cantidad a comprar: ");
                     int cant = sc.nextInt();
                     
