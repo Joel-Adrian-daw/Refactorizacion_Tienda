@@ -65,12 +65,12 @@ public class Tienda {
                 System.out.print("Introduzca nombre del producto a vender: ");
                 String prod = sc.next();
                 
-                int pos = -1;
-                for(int i=0; i<n.size(); i++) {
-                    if(n.get(i).equalsIgnoreCase(prod)) {
-                        pos = i;
-                        break;
-                    }
+                
+                Producto encontrado=null;
+                for(Producto p:productos){
+                    if(p.getNombre().equalsIgnoreCase(prod))
+                        encontrado = p;
+                    break;
                 }
                 
                 if(pos != -1) {
