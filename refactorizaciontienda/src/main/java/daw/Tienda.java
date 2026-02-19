@@ -51,11 +51,12 @@ public class Tienda {
                 
             } else if(op == 2) {
                 System.out.println("\n--- INVENTARIO ACTUAL ---");
-                if(n.isEmpty()) {
+                
+                if(productos.isEmpty()) {
                     System.out.println("No hay productos.");
                 } else {
-                    for(int i=0; i<n.size(); i++) {
-                        System.out.println(i + ". " + n.get(i) + " - " + p.get(i) + "€ - Stock: " + s.get(i));
+                    for(int i=0; i<productos.size(); i++) {
+                        System.out.println(i + ". " + productos.get(i));
                     }
                 }
                 
