@@ -79,22 +79,25 @@ public class Tienda {
                     System.out.print("Cantidad a comprar: ");
                     int cant = sc.nextInt();
                     
-                    if(s.get(pos) >= cant) {
-                        double total = cant * p.get(pos);
+                   //cambios
+                    if(encontrado.getStock() >= cant) {
+                        double total = cant * encontrado.getPrecio();
                         
                         // Hay números fijos que se utilizan en el código
+                        //cambios oferta simple
                         if(total > 50) {
                             System.out.println("¡Oferta! Descuento aplicado por compra superior a 50€");
-                            total = total * 0.90; 
+                            total = total * 0.90;
                         }
                         
-                        s.set(pos, s.get(pos) - cant); // Actualizar stock
+                        //cambios
+                        encontrado.reducirStock(cant); // Actualizar stock
                         System.out.println("Venta realizada. Total a pagar: " + total + "€");
                         
-                        // Debería ser Singleton
-                        System.out.println("[LOG SYSTEM]: Venta de " + cant + "x " + n.get(pos) + " registrada.");
-                        if(s.get(pos) < 3) {
-                            System.out.println("[LOG SYSTEM]: ALERTA DE STOCK BAJO para " + n.get(pos));
+                        // Debería ser Singleton cambios
+                        System.out.println("[LOG SYSTEM]: Venta de " + cant + "x " + encontrado.getNombre() + " registrada.");
+                        if(encontrado.getStock() < 3) {
+                            System.out.println("[LOG SYSTEM]: ALERTA DE STOCK BAJO para " + encontrado.getNombre());
                         }
                         
                     } else {
