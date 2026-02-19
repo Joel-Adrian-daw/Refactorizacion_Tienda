@@ -45,10 +45,9 @@ public class Tienda {
                 System.out.print("Stock inicial: ");
                 int stock = sc.nextInt();
                 
-                n.add(nombre);
-                p.add(precio);
-                s.add(stock);
-                System.out.println("Producto añadido correctamente.");
+               
+                productos.add(new Producto(nombre, precio, stock));
+                System.out.println("el producto se añadio correctamente ");
                 
             } else if(op == 2) {
                 System.out.println("\n--- INVENTARIO ACTUAL ---");
